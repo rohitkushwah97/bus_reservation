@@ -5,22 +5,19 @@
 #   gem 'sqlite3'
 #
 default: &default
-  encoding: unicode
-  adapter: postgresql
-  database: bus_reservation
-  username: postgres
-  password: postgres
-  host: localhost
+  database: d3vtde8gou86ph
+  username: njdmkerghzbsji
+  password: 7d56528d2eff20e07d38976e878f1bd7047678e6cee5b119e91898a95cdd0a80
+  host: ec2-44-197-94-126.compute-1.amazonaws.com
+  uri: postgres://njdmkerghzbsji:7d56528d2eff20e07d38976e878f1bd7047678e6cee5b119e91898a95cdd0a80@ec2-44-197-94-126.compute-1.amazonaws.com:5432/d3vtde8gou86ph
+  heroku_cli: heroku pg:psql postgresql-globular-37926 --app bus-reservation-shriffle
   port: 5432
 
 development:
   <<: *default
-  database: bus_reservation_development
 
 test:
   <<: *default
-  database: bus_reservation_test
 
 production:
   <<: *default
-  database: bus_reservation_production
