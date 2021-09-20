@@ -5,7 +5,7 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<% if @users.blank? %>
+	<% if @users.blank? %>
 	<h4> Please click on new link and create a user <%= link_to 'New', new_user_path %></h4>
 <% else %>
 	<%= link_to 'New', new_user_path %>

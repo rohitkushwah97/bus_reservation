@@ -1,4 +1,5 @@
 class User < ApplicationRecord
 	enum gender: [:male, :female]
-	# validates :first_name, :last_name, :email, :phone_number, :age, presence: true
+	validates :first_name, :last_name, :phone_number, :age, presence: true
+	validates :email, uniqueness: true
 end
